@@ -1,6 +1,10 @@
 # Solving Large Sparse Linear Systems: CG and PCG Methods
 
-
+![Language](https://img.shields.io/badge/Language-MATLAB-orange)
+![Type](https://img.shields.io/badge/Type-Masters%20Project-blue)
+![University](https://img.shields.io/badge/University-SFedU-red)
+![Year](https://img.shields.io/badge/Year-2026-green)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 > **Individual Project** — Numerical Methods of Linear Algebra for Sparse Matrices  
 > Southern Federal University, Department of Mathematical Modeling, 2026  
@@ -131,7 +135,11 @@ CG converged in exactly n=5 iterations — confirming the **finite termination p
 
 **PCG reduced iterations by 46%** (41 → 22). The marginal CPU overhead at n=900 is explained by the two triangular solves per PCG iteration — at n ≥ 10⁵ the iteration savings dominate and PCG wins decisively in total time.
 
+### Convergence Comparison
 
+![CG vs PCG Convergence](figures/cg_vs_pcg.png)
+
+![Convergence Rate vs Condition Number](figures/convergence_plot.png)
 
 ---
 
@@ -226,4 +234,5 @@ whos A
 ## Academic Context
 
 This project was completed as an individual project for the course **Numerical Methods of Linear Algebra for Sparse Matrices** at Southern Federal University (SFedU), Department of Mathematical Modeling, MSD Group, 2026.
+
 
