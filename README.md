@@ -6,9 +6,9 @@
 ![Year](https://img.shields.io/badge/Year-2026-green)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-> **Individual Project** — Numerical Methods of Linear Algebra for Sparse Matrices  
+> **Joint Project** — Numerical Methods of Linear Algebra for Sparse Matrices  
 > Southern Federal University, Department of Mathematical Modeling, 2026  
-> **Author:** Goriola-Obafemi Babatunde Sukanmi  
+> **Authors:** Goriola-Obafemi Babatunde Sukanmi · Ovolabani Ayobami  
 > **Supervisor:** Prof. Anna Nasedkina
 
 ---
@@ -97,7 +97,7 @@ The sparsity pattern of A reflects the underlying mesh connectivity and directly
 
 | 1D Poisson Matrix (n=500, nnz=1498) | gr30×30 Matrix Market (n=900, nnz=7744) |
 |:---:|:---:|
-| ![1D Poisson](figures/spy_poisson.png) | ![gr30x30](figures/spy_gr30.png) |
+| ![1D Poisson](spy_poisson.png) | ![gr30x30](spy_gr30.png) |
 | Tridiagonal structure — 1D connectivity | Five-band structure — 2D connectivity |
 | IC factor is near-exact → PCG converges in 1 step | Wider bandwidth → larger κ(A) → more iterations |
 
@@ -137,9 +137,9 @@ CG converged in exactly n=5 iterations — confirming the **finite termination p
 
 ### Convergence Comparison
 
-![CG vs PCG Convergence](figures/cg_vs_pcg.png)
+![CG vs PCG Convergence](cg_vs_pcg.png)
 
-![Convergence Rate vs Condition Number](figures/convergence_plot.png)
+![Convergence Rate vs Condition Number](convergence_plot.png)
 
 ---
 
@@ -148,21 +148,16 @@ CG converged in exactly n=5 iterations — confirming the **finite termination p
 ```
 CG-PCG-Sparse-Linear-Systems/
 │
-├── README.md                          ← This file
-├── code/
-│   ├── myCG.m                         ← CG implementation (MATLAB)
-│   └── myPCG.m                        ← PCG implementation (MATLAB)
-├── report/
-│   └── CG_PCG_Report.pdf              ← Full academic report
-├── presentation/
-│   └── CG_PCG_Slides.pptx             ← 20-slide presentation
-├── figures/
-│   ├── spy_poisson.png                ← 1D Poisson sparsity pattern
-│   ├── spy_gr30.png                   ← gr30×30 sparsity pattern
-│   ├── convergence_plot.png           ← CG convergence vs κ(A)
-│   └── cg_vs_pcg.png                  ← CG vs PCG comparison
-└── data/
-    └── gr_30_30.mtx                   ← Matrix Market test matrix
+├── README.md               ← This file
+├── my_CG.mlx               ← CG implementation (MATLAB Live Script)
+├── my_PCG.mlx              ← PCG implementation (MATLAB Live Script)
+├── mmread.m                ← Matrix Market reader
+├── gr_30_30.mtx            ← Matrix Market test matrix (n = 900)
+├── CG_PCG_FINAL_*.pptx     ← Presentation slides
+├── spy_poisson.png         ← 1D Poisson sparsity pattern
+├── spy_gr30.png            ← gr30×30 sparsity pattern
+├── convergence_plot.png    ← CG convergence vs κ(A)
+└── cg_vs_pcg.png           ← CG vs PCG comparison
 ```
 
 ---
@@ -171,12 +166,12 @@ CG-PCG-Sparse-Linear-Systems/
 
 ### Requirements
 - MATLAB R2020b or later
-- `mmread.m` function (available from [NIST Matrix Market](https://math.nist.gov/MatrixMarket/))
+- `mmread.m` (included in this repository, from the [NIST Matrix Market](https://math.nist.gov/MatrixMarket/))
 
 ### Run CG
 
 ```matlab
-% Open myCG.m in MATLAB as a Live Script
+% Open my_CG.mlx in MATLAB as a Live Script
 % Run section by section with Ctrl+Enter
 
 % Or call the function directly:
@@ -203,8 +198,7 @@ fprintf('PCG converged in %d iterations, rel. residual = %.2e\n', k, rel_res)
 ### Load Matrix Market matrix
 
 ```matlab
-addpath('path/to/mmread')
-A = mmread('data/gr_30_30.mtx');
+A = mmread('gr_30_30.mtx');   % run from the repository folder
 whos A
 ```
 
@@ -233,6 +227,7 @@ whos A
 
 ## Academic Context
 
-This project was completed as an individual project for the course **Numerical Methods of Linear Algebra for Sparse Matrices** at Southern Federal University (SFedU), Department of Mathematical Modeling, MSD Group, 2026.
+This project was completed as a joint project for the course **Numerical Methods of Linear Algebra for Sparse Matrices** at Southern Federal University (SFedU), Department of Mathematical Modeling, MSD Group, 2026.
+
 
 
