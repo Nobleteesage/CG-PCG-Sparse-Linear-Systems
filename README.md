@@ -9,7 +9,7 @@
 > **Individual Project** — Numerical Methods of Linear Algebra for Sparse Matrices  
 > Southern Federal University, Department of Mathematical Modeling, 2026  
 > **Author:** Goriola-Obafemi Babatunde Sukanmi  
-> **Supervisor:** Anna Nasedkina
+> **Supervisor:** Prof. Anna Nasedkina
 
 ---
 
