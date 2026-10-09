@@ -8,7 +8,8 @@
 
 > **Joint Project** — Numerical Methods of Linear Algebra for Sparse Matrices  
 > Southern Federal University, Department of Mathematical Modeling, 2026  
-> **Authors:** Goriola-Obafemi Babatunde Sukanmi · Ovolabani Ayobami  
+**Authors:** Goriola-Obafemi Babatunde Sukanmi (project lead) · Ovolabani Ayobami  
+> **Contributions:** Goriola-Obafemi led the project: derived and implemented the CG and PCG solvers in MATLAB, designed and ran all numerical experiments, and wrote the analysis and this repository. Ovolabani Ayobami prepared the presentation slides. 
 > **Supervisor:** Prof. Anna Nasedkina
 
 ---
